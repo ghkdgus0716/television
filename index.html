@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>television</title>
+	<style>
+		#blueSquare{ width:250px; height:200px; background: red; margin:auto; margin-top:200px; transition: all 1s;}
+		#textbox{width:600px; height:150px; text-align: center; line-height: 70px; font-size:40px; position: absolute; right : 250px; top:480px; color:blue; background: white; border:3px solid blue; }
+		#screen1 {width:405px;  position: absolute; left:108px; top:230px;}
+		#tv {width:600px; position: absolute; left:100px; top:100px;}
+		#rainbow1 {width:300px; position: absolute; left:480px; top:100px;}
+		#recordM {width:400px; position: absolute; right:150px; top:60px;}
+		img {cursor:pointer;}
+	</style>
+</head>
+<body style = "background-color: yellow;">
+	<div id="blueSquare"></div>
+	<div id="textbox">Television = Warning </br> Record = Nice </div>
+	<img src="rainbow.gif" id="rainbow1">
+	<img src="record1.png" id="recordM">
+	<img src="blackscreen.png" id="screen1">
+	<img src="pinktelevision.png" id="tv">
+	<audio id="testMusic">
+		<source src = "genius.mp3" type="audio/mpeg">
+	</audio>
+	
+
+
+	<script type="text/javascript">
+		//consol.log( redSquare.style );
+
+		var toggle = "off";
+
+		tv.onclick = function(){
+			if(toggle == "off"){
+				screen1.setAttribute("src","warning.gif");
+				toggle = "on";
+				
+			}else {
+				screen1.setAttribute("src","blackscreen.png");
+				toggle = "off";
+				
+			}
+			
+		}
+
+		recordM.onclick = function(){
+			if(toggle == "off"){
+				recordM.setAttribute("src","record2.png");
+				toggle = "on";
+				testMusic.play();
+			}else {
+				recordM.setAttribute("src","record1.png");
+				toggle = "off";
+				testMusic.pause();
+			}
+			
+		
+	}
+	</script>
+	
+</body>
+</html>
